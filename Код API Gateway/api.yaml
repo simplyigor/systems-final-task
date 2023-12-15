@@ -1,0 +1,119 @@
+openapi: 3.0.0
+info:
+  title: Sample API
+  version: 1.0.0
+servers:
+- url: https://d5d25uuvi8egrdfdgltk.apigw.yandexcloud.net
+x-yc-apigateway:
+  cors:
+    origin: '*'
+    methods: '*'
+    allowedHeaders: '*'    
+paths:
+  /:
+    get:
+      x-yc-apigateway-integration:
+        type: dummy
+        content:
+          '*': Hello!
+        http_code: 200
+        http_headers:
+          Content-Type: text/plain
+  /discoverArtists/{artistName}: # Интеграция №1 – Cloud Function (GET)
+    get:
+      summary: Выводит описание исполнителя и подборку его треков
+      parameters:
+      - name: artistName
+        in: path
+        required: true
+        schema:
+          type: string      
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: d4etq6ji86rn9ovggcj9
+        service_account_id: aje38vta7aheth19dpea
+  /modifySongs: # Интеграция №2 – Cloud Function (GET, POST, DELETE)
+    get:
+      summary: Проверяет есть ли песня определенного артиста в БД
+      parameters:
+      - name: songName
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: artistName
+        in: query
+        required: true
+        schema:
+          type: string    
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: d4e7jltnn2l5epgsgl0d
+        service_account_id: aje38vta7aheth19dpea 
+    post:
+      summary: Сохраняет введенную песню и имя исполнителя в БД
+      parameters:
+      - name: songName
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: artistName
+        in: query
+        required: true
+        schema:
+          type: string            
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: d4e7jltnn2l5epgsgl0d
+        service_account_id: aje38vta7aheth19dpea
+    delete:
+      summary: Удаляет запись из БД по названию песни и имени исполнителя
+      parameters:
+      - name: songName
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: artistName
+        in: query
+        required: true
+        schema:
+          type: string            
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: d4e7jltnn2l5epgsgl0d
+        service_account_id: aje38vta7aheth19dpea
+  /dailySong: # Интеграция №3 – Object Storage (GET)
+    get:
+      summary: Выводит json, c коллекцией различных песен (используется в блоке Daily Songs)
+      x-yc-apigateway-integration:
+        type: object_storage
+        bucket: songs-api-systems
+        object: 'songs.json'
+        service_account_id: aje38vta7aheth19dpea
+  /similarSongs/{songName}/{artistName}: # Интеграция №4 – Cloud Function (GET)
+    get:
+      summary: Выдает список песен похожих на композицию X исполнителя Y
+      parameters:
+      - name: songName
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: artistName
+        in: path
+        required: true
+        schema:
+          type: string    
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: d4ef84khv204g8ecjoob
+        service_account_id: aje38vta7aheth19dpea
+  /userSongs: # Интеграция №5 – Cloud Function (GET)
+    get:
+      summary: Выводит все записи из БД    
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: d4e7jltnn2l5epgsgl0d
+        service_account_id: aje38vta7aheth19dpea   

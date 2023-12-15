@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Mooli&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+  }
+  
+ h1 {
+   font-size: 3rem;
+   margin-bottom: 20px;
+ }
+  
+  h1,
+  h2,
+  h3 {
+    font-family: "Comfortaa", sans-serif;
+  }
+
+  span {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #112434;
+  }
+  
+  body {
+    min-height: 100dvh;
+    overflow-x: hidden;
+    background: url(footer.png) no-repeat center center fixed;
+    background-size: cover;
+    background-color: #fff3e3;
+    font-family: "Mooli", sans-serif;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .logo {
+    color: #112434;
+    font-weight: 700;
+    font-size: clamp(1.1rem, 6vw, 1.7rem);
+    text-decoration: none;
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navigation li {
+    list-style: none;
+    margin-left: 20px;
+  }
+  
+  .navigation li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #112434;
+    border-radius: 20px;
+    font-size: clamp(0.9rem, 6vw, 1rem);
+  }
+  
+  .navigation li a:hover,
+  .navigation li a.active {
+    background: #112434;
+    color: #fff;
+  }
+
+  .song-of-the-day {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 4%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+  }
+  
+  .song-of-the-day img {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    margin-right: 20px;
+    border-radius: 20px 0 0 20px;
+  }
+  
+  .song-of-the-day a {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #112434;
+  }
+      
+  .song-of-the-day p {
+    font-size: 18px;
+    color: #666;
+  }
+
+  .text-gradient {
+    background: linear-gradient(
+        to right,
+        #7f2ba4 20%,
+        #a287e4 30%,
+        #0055d4 80%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 3s ease-in-out infinite alternate;
+  }
+  
+  @keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+  }
+
+  .input-field input {
+    width: 45.7%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: "Mooli", sans-serif;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-top: 4%;
+  }
+
+  .input-field button {
+    border: none;
+    outline: none;
+    background-color: #112434;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .input-field button:hover {
+    background-color: #1365c8;
+  }
+
+  .similar-artist-name {
+    font-size: 13px;
+    color: #112434;
+  }
+
+  .similar-songs-card {
+    margin-top: 3%;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 100%;
+    padding: 25px 25px 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-sizing: border-box;
+    border-radius: 20px 20px 20px 20px;
+  }
+  
+  .ag-card_title {
+    display: block;
+    line-height: 1.22;
+    padding: 0 0 15px;
+    text-decoration: none;
+    color: #112434;
+    font-size: 20px;
+    transition: all .3s ease;
+  }
+
+  .featured-tracks {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .track-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .fa-regular {
+    font-size: 1.8em;
+    color: #112434;
+  }
+  
+  .buttons-wrap {
+    margin-right: 2.7%;
+    display: flex;
+    gap: 30%;
+    align-items: center;
+  }
+  
+  .like-btn {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .lastfm-link {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 11px;
+    color: #112434;
+  }
+  
+  .lastfm-link:hover {
+    color: #1365c8;
+  }
+  
+  .like-btn.liked i {
+    color: #ff3c16;
+  }
+  
+  .text-gradient {
+    background: linear-gradient(
+        to right,
+        #7f2ba4 20%,
+        #a287e4 30%,
+        #0055d4 80%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 3s ease-in-out infinite alternate;
+  }
+  
+  @keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 2s ease-in-out;
+    animation-fill-mode: both;
+  }
+
+  @media only screen and (max-width: 673px) {
+    body{
+      background-image: none;
+      background-color: #fff3e3;
+    }
+    .main-content {
+      margin: auto;
+      width: 70%;
+      flex-direction: column;
+    }
+    .heading-similar-songs {
+      margin-top: -65px;
+    }
+    .input-field input {
+      width: 44%;
+    }
+    .logo {
+      display: none;
+    }
+    .navigation {
+      width: 300px;
+    }}
+
+  @media only screen and (max-width: 989px) {
+    .input-field input {
+      width: 43%;
+    }
+  }
+
+  @media only screen and (max-width: 1318px) {
+    .input-field input {
+      width: 44%;
+    }
+  }

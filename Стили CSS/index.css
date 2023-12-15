@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Mooli&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .intro-card {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .intro-card h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #112434;
+  }
+  
+  .intro-card span {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #112434;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Comfortaa", sans-serif;
+  }
+  
+  body {
+    min-height: 100dvh;
+    overflow-x: hidden;
+    background: url(bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Mooli", sans-serif;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .logo {
+    color: #112434;
+    font-weight: 700;
+    font-size: clamp(1.1rem, 6vw, 1.7rem);
+    text-decoration: none;
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navigation li {
+    list-style: none;
+    margin-left: 20px;
+  }
+  
+  .navigation li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #112434;
+    border-radius: 20px;
+    font-size: clamp(0.9rem, 6vw, 1rem);
+  }
+  
+  .navigation li a:hover,
+  .navigation li a.active {
+    background: #112434;
+    color: #fff;
+  }
+
+ .github-btn {
+    padding: 6px 15px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #112434;
+    font-size: 20px;
+    font-family: "Mooli", sans-serif;
+    border: none;
+    margin-top: 3%;
+    cursor: pointer;
+  }
+
+.i {
+    color: #fff;
+  }
+
+.github-btn:hover {
+    background: #1365c8;
+    color: #fff;
+    cursor: pointer;
+  }
+
+.text-gradient {
+    font-size: var(--font-size-l);
+    background: linear-gradient(
+        to right,
+        #1365c8 20%,
+        #73ace0 30%,
+        #fef1df 70%,
+        #db8cb3 80%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 5s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+a {
+  text-decoration: none;
+}
+
+.links-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+}
+
+@media only screen and (max-width: 673px) {
+.logo {
+    display: none;
+}
+.navigation {
+    width: 100%;
+}
+.intro-card {
+  margin-top: 3%;
+}
+}  

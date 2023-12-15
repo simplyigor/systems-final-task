@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MusicBuddy</title>
+    <link rel="stylesheet" href="songs.css">
+  </head>
+  <body>
+    <header>
+        <a href="index.html" class="logo"> <i class="fa-solid fa-music"></i> MusicBuddy </a>
+        <ul class="navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="artists.html">Artists</a></li>
+          <li><a href="songs.html" class = "active">Songs</a></li>
+          <li><a href="faves.html">Faves</a></li>
+        </ul>
+      </header>
+      <div class = "main-content">
+        <div>
+          <h1>Daily songs</h1>
+          <span> This section is the perfect place for music lovers to discover new artists and songs every day. Check out our picks: </span>
+          <section class="song-of-the-day">
+            <img src="placeholder.png" alt = "Song Cover" class = "cover-image">
+            <div>
+              <a href = "#" class = "text-gradient song-name">  </a>
+              <p class = "artist-name"></p>
+            </div>
+          </section>
+          <section class="song-of-the-day">
+            <img src="placeholder.png" alt = "Song Cover" class = "cover-image">
+            <div>
+              <a href = "#" class = "text-gradient song-name">  </a>
+              <p class = "artist-name"></p>
+            </div>
+          </section>
+          <section class="song-of-the-day">
+            <img src="placeholder.png" alt = "Song Cover" class = "cover-image">
+            <div>
+              <a href = "#" class = "text-gradient song-name">  </a>
+              <p class = "artist-name"></p>
+            </div>
+          </section>
+        </div>        
+        <div>
+          <h1 class = "heading-similar-songs">Similar songs</h1>
+          <span> This section allows one to discover new music that is similar to their favorite songs. Simply enter the name of a song and its artist! </span>
+          <section class = "similar-songs">
+            <div class = "input-field">
+              <input type = "text" id = "artist-name-input" name = "artist-name" required placeholder="Artist name">
+              <input type = "text" id = "song-name-input" name = "song-name" required placeholder="Song name">
+              <button class = "find-sim-btn" type = "submit" id = "submit-button"><i class="fa-solid fa-search"></i></button>
+            </div>
+            <div class = "similar-songs-card">
+              <div class="ag-card_title">
+                Songs
+              </div>
+              <div class="featured-tracks">
+                <div class = "track-wrap">
+                  <div>
+                    <a class = "text-gradient" href = "https://www.last.fm/ru/music/Cigarettes+After+Sex/_/Apocalypse" id = "track-1"> Apocalypse </a>
+                    <p class = "similar-artist-name" id = "similar-artist-name-1"> Cigarettes After Sex</p>
+                  </div>
+                  <div class = "buttons-wrap">
+                    <button class = "like-btn"><i class="fa-regular fa-heart"></i></button>
+                    <a href = "https://www.last.fm/ru/music/Cigarettes+After+Sex/_/Apocalypse" class = "lastfm-link" id = "btn-track-1"><i class="fa-brands fa-square-lastfm fa-2xl"></i></a>
+                  </div>
+                </div>
+                <div class = "track-wrap">
+                  <div>
+                    <a class = "text-gradient" href = "https://www.last.fm/ru/music/Sia/Chandelier" id = "track-2"> Chandelier </a>
+                    <p class = "similar-artist-name" id = "similar-artist-name-2"> Sia </p>
+                  </div>
+                  <div class = "buttons-wrap">
+                    <button class = "like-btn"><i class="fa-regular fa-heart"></i></button>
+                    <a href = "https://www.last.fm/ru/music/Sia/Chandelier" class = "lastfm-link" id = "btn-track-2"><i class="fa-brands fa-square-lastfm fa-2xl"></i></a>
+                  </div>
+                </div>
+                <div class = "track-wrap">
+                  <div>
+                    <a class = "text-gradient" href = "https://www.last.fm/music/Daughter/Doing+The+Right+Thing" id = "track-3"> Doing The Right Thing </a>
+                    <p class = "similar-artist-name" id = "similar-artist-name-3"> Daughter</p>
+                  </div>
+                  <div class = "buttons-wrap">
+                    <button class = "like-btn"><i class="fa-regular fa-heart"></i></button>
+                    <a href = "https://www.last.fm/music/Daughter/Doing+The+Right+Thing" class = "lastfm-link" id = "btn-track-3"><i class="fa-brands fa-square-lastfm fa-2xl"></i></a>
+                  </div>
+                </div>
+                <div class = "track-wrap">
+                  <div>
+                    <a class = "text-gradient" href = "https://www.last.fm/music/Florence+%252B+the+Machine/Lungs/Cosmic+Love" id = "track-4"> Cosmic Love </a>
+                    <p class = "similar-artist-name" id = "similar-artist-name-4"> Florence + the Machine </p>
+                  </div>
+                  <div class = "buttons-wrap">
+                    <button class = "like-btn"><i class="fa-regular fa-heart"></i></button>
+                    <a href = "https://www.last.fm/music/Florence+%252B+the+Machine/Lungs/Cosmic+Love" class = "lastfm-link" id = "btn-track-4"><i class="fa-brands fa-square-lastfm fa-2xl"></i></a>
+                  </div>
+                </div>
+                <div class = "track-wrap">
+                  <div>
+                    <a class = "text-gradient" href = "https://www.last.fm/music/The+Weeknd" id = "track-5"> Save Your Tears </a>
+                    <p class = "similar-artist-name" id = "similar-artist-name-5"> The Weeknd </p>
+                  </div>
+                  <div class = "buttons-wrap">
+                    <button class = "like-btn"><i class="fa-regular fa-heart"></i></button>
+                    <a href = "https://www.last.fm/music/The+Weeknd" class = "lastfm-link" id = "btn-track-5"><i class="fa-brands fa-square-lastfm fa-2xl"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>            
+        </div>      
+      </div>    
+    <script src="https://kit.fontawesome.com/04070539cf.js" crossorigin="anonymous"></script>
+    <script src="navigation.js"></script>
+    <script src = "songs.js"></script>
+  </body>
+</html>

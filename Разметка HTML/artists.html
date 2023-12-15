@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MusicBuddy</title>
+    <link rel="stylesheet" href="artists.css">
+  </head>
+  <body>
+    <header>
+        <a href="index.html" class="logo"> <i class="fa-solid fa-music"></i> MusicBuddy </a>
+        <ul class="navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="artists.html" class = "active">Artists</a></li>
+          <li><a href="songs.html">Songs</a></li>
+          <li><a href="faves.html">Faves</a></li>
+        </ul>
+      </header>
+    <div class = "main-content">
+      <h1>Discover artists</h1>
+      <span> You can look up information about your favourite musicians and listen to a selection of their songs here. Go ahead, try it out! </span>
+      <div class="input-field">
+        <input type="text" class="artist-input" placeholder="e.g. Cigarettes After Sex">
+        <button class = "srch-btn" type="submit"><i class="fa-solid fa-search"></i></button>
+      </div>
+      <div class="ag-card_info">
+        <div class="ag-card_descr">
+          <div class="ag-card_title">
+            Biography
+          </div>
+          <div id = "description" class="ag-card_text">
+            Cigarettes After Sex is an American ambient pop musical group led by Greg Gonzalez, founded in El Paso, Texas in 2008. Gonzalez recorded the first EP, I., in a four-story stairway at his alma mater, University of Texas at El Paso. Gonzalez relocated to Brooklyn, NY where the band's single, "Affection", was recorded and released in 2015 along with a cover of REO Speedwagon's "Keep On Loving You". 
+          </div>
+          <div class="ag-card_title">
+            Tags
+          </div>
+          <div class = "tags-wrap">
+            <div id = "tag-1" class="label-tag">dream pop</div>
+            <div id = "tag-2" class="label-tag">shoegaze</div>
+            <div id = "tag-3" class="label-tag">slowcore</div>
+            <div id = "tag-4" class="label-tag">lo-fi</div>
+          </div>
+          <div class="ag-card_title">
+            Featured tracks
+          </div>
+          <div class="featured-tracks">
+            <div class = "track-wrap">
+              <a class = "text-gradient" href = "https://www.last.fm/ru/music/Cigarettes+After+Sex/_/Apocalypse" id = "track-1"> Apocalypse <i class="fa-solid fa-link fa-xs"></i></a>
+              <div class = "buttons-wrap">
+                <button class = "like-btn"><i class="fa-regular fa-heart"></i></button>
+                <a href = "https://www.last.fm/ru/music/Cigarettes+After+Sex/_/Apocalypse" class = "lastfm-link" id = "btn-track-1"><i class="fa-brands fa-square-lastfm fa-2xl"></i></a>
+              </div>
+            </div>
+            <div class = "track-wrap">
+              <a class = "text-gradient" href = "https://www.last.fm/ru/music/Cigarettes+After+Sex/_/Sunsetz" id = "track-2"> Sunsetz <i class="fa-solid fa-link fa-xs"></i></a> 
+              <div class = "buttons-wrap">
+                <button class = "like-btn"><i class="fa-regular fa-heart"></i></button>
+                <a href = "https://www.last.fm/ru/music/Cigarettes+After+Sex/_/Sunsetz" class = "lastfm-link" id = "btn-track-2"><i class="fa-brands fa-square-lastfm fa-2xl"></i></a>
+              </div>
+            </div>
+            <div class = "track-wrap">
+              <a class = "text-gradient" href = "https://www.last.fm/ru/music/Cigarettes+After+Sex/_/K." id = "track-3"> K. <i class="fa-solid fa-link fa-xs"></i></a> 
+              <div class = "buttons-wrap">
+                <button class = "like-btn"><i class="fa-regular fa-heart"></i></button>
+                <a href = "https://www.last.fm/ru/music/Cigarettes+After+Sex/_/K." class = "lastfm-link" id = "btn-track-3" target="_blank"><i class="fa-brands fa-square-lastfm fa-2xl"></i></a>
+              </div>
+            </div>
+            <div class = "track-wrap">
+              <a class = "text-gradient" href = "https://www.last.fm/ru/music/Cigarettes+After+Sex/_/Cry" id = "track-4"> Cry <i class="fa-solid fa-link fa-xs"></i></a> 
+              <div class = "buttons-wrap">
+                <button class = "like-btn"><i class="fa-regular fa-heart"></i></button>
+                <a href = "https://www.last.fm/ru/music/Cigarettes+After+Sex/_/Cry" class = "lastfm-link" id = "btn-track-4"><i class="fa-brands fa-square-lastfm fa-2xl"></i></a>
+              </div>
+            </div>
+            <div class = "track-wrap">
+              <a class = "text-gradient" href = "https://www.last.fm/ru/music/Cigarettes+After+Sex/_/Sweet" id = "track-5"> Sweet <i class="fa-solid fa-link fa-xs"></i></a> 
+              <div class = "buttons-wrap">
+                <button class = "like-btn"><i class="fa-regular fa-heart"></i></button>
+                <a href = "https://www.last.fm/ru/music/Cigarettes+After+Sex/_/Sweet" class = "lastfm-link" id = "btn-track-5"><i class="fa-brands fa-square-lastfm fa-2xl"></i></a>
+              </div>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </li>
+    </div>          
+    <script src="https://kit.fontawesome.com/04070539cf.js" crossorigin="anonymous"></script>
+    <script src="navigation.js"></script>
+    <script src = "artists.js"></script>
+  </body>
+</html>
